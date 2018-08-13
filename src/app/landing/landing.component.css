@@ -1,0 +1,15 @@
+.landing-card-container {
+    max-width: 500px;
+    background-size: cover;
+    text-align: center;
+    background-image: url("../../assets/journal.jpg");
+}
+
+.login-button {
+    width: 50%;
+}
+
+.register-button {
+    width: 50%;
+    margin-top: 8px;
+}
