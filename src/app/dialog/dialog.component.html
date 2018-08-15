@@ -1,0 +1,7 @@
+<div *ngIf="display && data">
+<h1 mat-dialog-title>{{data?.title}}</h1>
+<p mat-dialog-content>{{data?.body}}</p>
+
+<button *ngIf="data.showPositiveButton" mat-raised-button color="primary">{{data?.positiveButtonLabel}}</button>
+<button *ngIf="data.showNegativeButton" mat-flat-button>{{data?.negativeButtonLabel}}</button>
+</div>

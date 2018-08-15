@@ -1,25 +1,28 @@
-<div class="login-form-container">
+<div>
   <mat-card>
     <mat-card-header>
-      Sign In
+      Create a Journal
     </mat-card-header>
-    <form #loginForm="ngForm" (ngSubmit)="_onSubmit()" novalidate>
+    <form #journalForm="ngForm" (ngSubmit)="onSubmit()" novalidate>
       <mat-list role="list">
         <mat-list-item>
           <mat-form-field appFormElement>
-            <input name="email" matInput placeholder="Email" type="email" [(ngModel)]="loginRequest.email" required>
+            <input name="title" matInput placeholder="Title" [(ngModel)]="journal.title" required>
           </mat-form-field>
         </mat-list-item>
+ 
         <mat-list-item>
           <mat-form-field appFormElement>
-            <input name="password" matInput placeholder="Password" type="password" [(ngModel)]="loginRequest.password" required>
+            <textarea name="content" matInput placeholder="Content" [(ngModel)]="journal.content" required></textarea>
           </mat-form-field>
         </mat-list-item>
+
         <mat-list-item>
-          <button mat-raised-button color="primary" [disabled]="!loginForm.form.valid">Sign In</button>
+          <button mat-raised-button color="primary" [disabled]="!journalForm.form.valid">Create</button>
           &nbsp;
           <app-progress-indicator [display]="showLoadingIndicator"></app-progress-indicator>
         </mat-list-item>
+
       </mat-list>
     </form>
   </mat-card>

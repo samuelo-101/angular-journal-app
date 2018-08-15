@@ -1,0 +1,12 @@
+<mat-toolbar color="primary">
+  <mat-toolbar-row>
+    <span>
+      <button mat-flat-button (click)="navHome()">
+        <mat-icon>home</mat-icon>
+      </button>
+    </span>
+    <span *ngIf="user">
+      <h1>{{user.firstName}}</h1>
+    </span>
+  </mat-toolbar-row>
+</mat-toolbar>

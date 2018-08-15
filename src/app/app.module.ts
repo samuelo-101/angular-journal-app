@@ -2,14 +2,18 @@ import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NgModule } from '@angular/core';
 
-import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 
 import { AppComponent } from './app.component';
 
-import { MatFormFieldModule, MatButtonModule, 
+import {
+  MatFormFieldModule, MatButtonModule,
   MatCardModule, MatInputModule, MatGridListModule,
-MatListModule } from '@angular/material';
+  MatListModule, MatProgressSpinnerModule, MatDialogModule, 
+  MatSnackBarModule, MatToolbarModule, 
+} from '@angular/material';
+
+import { MatIconModule } from '@angular/material/icon';
 
 
 import { LoginComponent } from './login/login.component';
@@ -17,12 +21,32 @@ import { AppRoutingModule } from './/app-routing.module';
 import { LandingComponent } from './landing/landing.component';
 import { RegisterComponent } from './register/register.component';
 
+import { HttpClientModule } from '@angular/common/http';
+import { ProgressIndicatorComponent } from './progress-indicator/progress-indicator.component';
+import { DialogComponent } from './dialog/dialog.component';
+import { SnackbarComponent } from './snackbar/snackbar.component';
+
+import { JournalsComponent } from './journals/journals.component';
+import { ToolBarComponent } from './tool-bar/tool-bar.component';
+import { EventService } from './service/event.service';
+import { ComposeJournalComponent } from './compose-journal/compose-journal.component';
+import { FormElementDirective } from './directive/form-element.directive';
+import { JournalListPipe } from './pipe/journal-list.pipe';
+
 @NgModule({
   declarations: [
     AppComponent,
     LoginComponent,
     LandingComponent,
-    RegisterComponent
+    RegisterComponent,
+    ProgressIndicatorComponent,
+    DialogComponent,
+    SnackbarComponent,
+    JournalsComponent,
+    ToolBarComponent,
+    ComposeJournalComponent,
+    FormElementDirective,
+    JournalListPipe,
   ],
   imports: [
     BrowserModule,
@@ -34,10 +58,17 @@ import { RegisterComponent } from './register/register.component';
     MatInputModule,
     MatGridListModule,
     MatListModule,
-    FormsModule
+    MatProgressSpinnerModule,
+    MatDialogModule,
+    MatSnackBarModule,
+    MatToolbarModule,
+    MatIconModule,
+    FormsModule,
+    HttpClientModule
   ],
-  exports: [],
-  providers: [],
+  exports: [SnackbarComponent],
+  entryComponents: [SnackbarComponent],
+  providers: [EventService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

@@ -1,3 +1,4 @@
+<div class="form-container">
 <mat-card>
   <mat-card-header>
     <h1>Sign Up</h1>
@@ -10,7 +11,8 @@
           <input id="firstName" name="firstName" 
           placeholder="First Name" 
           matInput type="text" 
-          [(ngModel)]="registrationRequest.firstName" required>
+          [(ngModel)]="registrationRequest.firstName"
+          [disabled]="disableForm" required>
         </mat-form-field>
       </mat-list-item>
       <mat-list-item>
@@ -18,7 +20,8 @@
           <input name="lastName" 
           placeholder="Last Name" 
           matInput type="text"
-          [(ngModel)]="registrationRequest.lastName" required>
+          [(ngModel)]="registrationRequest.lastName"
+          [disabled]="disableForm" required>
         </mat-form-field>
       </mat-list-item>
       <mat-list-item>
@@ -26,7 +29,8 @@
           <input name="email" 
           placeholder="Email" 
           matInput type="email"
-          [(ngModel)]="registrationRequest.email" required>
+          [(ngModel)]="registrationRequest.email"
+          [disabled]="disableForm" required>
         </mat-form-field>
       </mat-list-item>
       <mat-list-item>
@@ -34,14 +38,16 @@
           <input name="password" 
           placeholder="Password" 
           matInput type="password" 
-          [(ngModel)]="registrationRequest.password" required>
+          [(ngModel)]="registrationRequest.password"
+          [disabled]="disableForm" required>
         </mat-form-field>
       </mat-list-item>
       <mat-list-item class="center-horizontal">
-        <button mat-raised-button color="primary" [disabled]="!registrationForm.form.valid">Sign Up</button>
+        <button mat-raised-button color="primary" [disabled]="!registrationForm.form.valid || disableForm">Sign Up</button>
+        &nbsp; <app-progress-indicator [display]="showLoadingIndicator"></app-progress-indicator>
       </mat-list-item>
     </mat-list>
   </form>
 
-
 </mat-card>
+</div>

@@ -1,7 +1,9 @@
 .landing-card-container {
     max-width: 500px;
+    height: 400px;
     background-size: cover;
     text-align: center;
+    margin: auto;
     background-image: url("../../assets/journal.jpg");
 }
 
@@ -12,4 +14,11 @@
 .register-button {
     width: 50%;
     margin-top: 8px;
+}
+
+.action-button {
+    margin: 0 auto;
+    text-align: center;
+    display: inline-block;
+    float: none;
 }

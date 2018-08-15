@@ -1,0 +1,27 @@
+.parent-container {
+    text-align: center;
+    display: inline-block;
+    margin: 0 auto;
+    width: 80%;
+}
+
+.card {
+    max-width: 400px;
+}
+  
+.circular-header {
+    margin: auto;
+    text-align: center;
+    background-color: lightgray;
+    color: black;
+    background-size: cover;
+}
+
+.fab-add-journal {
+    float: right;
+}
+
+.no-contente-message-container {
+    text-align: center;
+}
+  
