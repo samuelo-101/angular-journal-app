@@ -34,4 +34,8 @@ export class JournalsComponent implements OnInit {
     this._router.navigate(['/journal/compose']);
   }
 
+  onJournalItemClick(id: number) {
+    this._router.navigate([`/journal/${id}`]);
+  }
+
 }

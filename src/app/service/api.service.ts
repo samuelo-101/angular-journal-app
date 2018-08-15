@@ -73,6 +73,15 @@ export class ApiService {
     );
   }
 
+  getJournalById(journalId: number): Observable<Journal> {
+    const urlPath = `${BASE_URL}journal/${journalId}`;
+    return this.http.get<Journal>(urlPath, API_HEADER)
+    .pipe(
+      tap(journal => console.log(journal)),
+      catchError(this.handleError<Journal>('Could not get Journal'))
+    );
+  }
+
   createJournal(journal: JournalItem): Observable<any> {
     const principal = this.sessionService.getPrincipal();
     const urlPath = `${BASE_URL}journal/create`;

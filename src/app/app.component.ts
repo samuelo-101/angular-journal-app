@@ -17,8 +17,8 @@ export class AppComponent implements OnInit {
   }
   
   ngOnInit() {
-    if(!this._sessionService.isSessionActive()) {
-      this._router.navigate(['/landing']);
-    }
+    // if(!this._sessionService.isSessionActive()) {
+    //   this._router.navigate(['/landing']);
+    // }
   }
 }

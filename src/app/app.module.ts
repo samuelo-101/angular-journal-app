@@ -32,6 +32,9 @@ import { EventService } from './service/event.service';
 import { ComposeJournalComponent } from './compose-journal/compose-journal.component';
 import { FormElementDirective } from './directive/form-element.directive';
 import { JournalListPipe } from './pipe/journal-list.pipe';
+import { ViewJournalComponent } from './view-journal/view-journal.component';
+import { JournalCardComponent } from './journal-card/journal-card.component';
+import { JournalPipe } from './pipe/journal.pipe';
 
 @NgModule({
   declarations: [
@@ -47,6 +50,9 @@ import { JournalListPipe } from './pipe/journal-list.pipe';
     ComposeJournalComponent,
     FormElementDirective,
     JournalListPipe,
+    ViewJournalComponent,
+    JournalCardComponent,
+    JournalPipe,
   ],
   imports: [
     BrowserModule,

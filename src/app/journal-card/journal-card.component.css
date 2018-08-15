@@ -1,0 +1,29 @@
+.card {
+    max-width: 300px;
+    max-height: 300px;
+}
+
+.circular-header {
+    margin-left: 0px;
+    float: left;
+    text-align: center;
+    justify-content: center;
+    background-color: lightgray;
+    color: black;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+}
+p {
+    text-align: start;
+}
+
+.author {
+    margin-right: 0px;
+    float: right;
+    font-size: 14px;
+    align-items: right;
+    display: flex;
+    text-align: right;
+    justify-content: right;
+}
