@@ -40,7 +40,7 @@ export class LoginComponent implements OnInit {
         if (response) {
           const user = response.user;
           this._sessionService.setPrincipal(user);
-          this._eventService.emit(response.user);
+          this._eventService.emitPrincipal(response.user);
           this._router.navigate(['/journals']);
         }
       }, error => {

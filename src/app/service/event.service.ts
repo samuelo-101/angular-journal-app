@@ -1,15 +1,16 @@
 import { Injectable, EventEmitter } from '@angular/core';
+import { User } from '../model/User';
 
 @Injectable({
   providedIn: 'root'
 })
 export class EventService {
 
-  dataEmitter: EventEmitter<any> = new EventEmitter<any>();
+  dataEmitter: EventEmitter<User> = new EventEmitter<User>();
 
   constructor() { }
 
-  emit(data: any) {
-    this.dataEmitter.emit(data);
+  emitPrincipal(principal: User) {
+    this.dataEmitter.emit(principal);
   }
 }

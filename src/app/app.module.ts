@@ -35,6 +35,7 @@ import { JournalListPipe } from './pipe/journal-list.pipe';
 import { ViewJournalComponent } from './view-journal/view-journal.component';
 import { JournalCardComponent } from './journal-card/journal-card.component';
 import { JournalPipe } from './pipe/journal.pipe';
+import { UserDisplayPipe } from './pipe/user-display.pipe';
 
 @NgModule({
   declarations: [
@@ -53,6 +54,7 @@ import { JournalPipe } from './pipe/journal.pipe';
     ViewJournalComponent,
     JournalCardComponent,
     JournalPipe,
+    UserDisplayPipe,
   ],
   imports: [
     BrowserModule,

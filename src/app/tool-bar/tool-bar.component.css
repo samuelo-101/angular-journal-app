@@ -1,0 +1,20 @@
+.title {
+    font-family: Zapf Chancery, cursive;
+    font-size: 22px;
+    text-align: center;
+    margin: auto;
+    display: inline;
+}
+
+.sign-out-link {
+    margin-right: 0px;
+    position: relative;
+    float: right;
+    text-align: right;
+    display: inline-block;
+    text-align: right;
+}
+
+.tool-bar-actions-container {
+    width: 100%;
+}

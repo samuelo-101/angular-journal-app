@@ -1,13 +1,13 @@
 <div class="no-contente-message-container" *ngIf="!journals || journals.length === 0">{{noContentMessage}}</div>
 <span class="fab-add-journal">
-  <button mat-mini-fab (click)="navComposeJournal()">
-    <mat-icon aria-label="Compose Journal">plus</mat-icon>
+  <button mat-mini-fab (click)="navComposeJournal()" position="br">
+    <mat-icon aria-label="Compose Journal">add</mat-icon>
   </button>
 </span>
-<div class="parent-container">
+<span class="parent-container">
   <div mat-list role="list">
     <div mat-list-item *ngFor="let journal of (journals | journalList)">
       <app-journal-card [journal]="journal" (click)="onJournalItemClick(journal.id)"></app-journal-card>&nbsp;
     </div>
   </div>
-</div>
+</span>

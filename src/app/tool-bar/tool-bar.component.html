@@ -1,12 +1,19 @@
 <mat-toolbar color="primary">
   <mat-toolbar-row>
-    <span>
-      <button mat-flat-button (click)="navHome()">
-        <mat-icon>home</mat-icon>
-      </button>
+    <span class="title">
+      {{_toolBarTitle}}
     </span>
-    <span *ngIf="user">
-      <h1>{{user.firstName}}</h1>
-    </span>
+    <div *ngIf="user">
+      Hi, {{user | userDisplay: 'firstOnly'}}
+    </div>
+  </mat-toolbar-row>
+
+  <mat-toolbar-row class="tool-bar-actions-container">
+    <button mat-flat-button (click)="navHome()">
+      <mat-icon>home</mat-icon>
+    </button>
+    <button mat-flat-button (click)="signOut()" class="sign-out-link" *ngIf="user">
+      Sign Out
+    </button>
   </mat-toolbar-row>
 </mat-toolbar>
