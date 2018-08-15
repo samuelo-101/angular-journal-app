@@ -2,7 +2,7 @@
     text-align: center;
     display: inline-block;
     margin: 0 auto;
-    width: 500px;
+    max-width: 400px;
 }
 
 .fab-add-journal {
