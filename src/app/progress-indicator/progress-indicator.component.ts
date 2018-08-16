@@ -7,7 +7,7 @@ import { Component, OnInit, Input } from '@angular/core';
 })
 export class ProgressIndicatorComponent implements OnInit {
 
-  @Input("display") display: Boolean = false;
+  @Input("display") public display: Boolean = false;
 
   constructor() { }
 

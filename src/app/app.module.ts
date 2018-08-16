@@ -15,67 +15,52 @@ import {
 
 import { MatIconModule } from '@angular/material/icon';
 
-
-import { LoginComponent } from './login/login.component';
 import { AppRoutingModule } from './/app-routing.module';
 import { LandingComponent } from './landing/landing.component';
-import { RegisterComponent } from './register/register.component';
 
 import { HttpClientModule } from '@angular/common/http';
 import { ProgressIndicatorComponent } from './progress-indicator/progress-indicator.component';
 import { DialogComponent } from './dialog/dialog.component';
 import { SnackbarComponent } from './snackbar/snackbar.component';
 
-import { JournalsComponent } from './journals/journals.component';
 import { ToolBarComponent } from './tool-bar/tool-bar.component';
 import { EventService } from './service/event.service';
-import { ComposeJournalComponent } from './compose-journal/compose-journal.component';
 import { FormElementDirective } from './directive/form-element.directive';
-import { JournalListPipe } from './pipe/journal-list.pipe';
-import { ViewJournalComponent } from './view-journal/view-journal.component';
-import { JournalCardComponent } from './journal-card/journal-card.component';
 import { JournalPipe } from './pipe/journal.pipe';
 import { UserDisplayPipe } from './pipe/user-display.pipe';
+import { JournalRoutingModule } from './journal-routing.module';
+import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
+import { AuthRoutingModule } from './auth-routing.module';
+import { AuthModule } from './auth.module';
+import { JournalModule } from './journal.module';
+import { SharedModule } from './shared.module';
 
 @NgModule({
   declarations: [
     AppComponent,
-    LoginComponent,
     LandingComponent,
-    RegisterComponent,
-    ProgressIndicatorComponent,
     DialogComponent,
-    SnackbarComponent,
-    JournalsComponent,
     ToolBarComponent,
-    ComposeJournalComponent,
     FormElementDirective,
-    JournalListPipe,
-    ViewJournalComponent,
-    JournalCardComponent,
-    JournalPipe,
     UserDisplayPipe,
+    PageNotFoundComponent
   ],
-  imports: [
+  imports: [     
+    SharedModule,
+
     BrowserModule,
     BrowserAnimationsModule,
+
     AppRoutingModule,
-    MatFormFieldModule,
-    MatButtonModule,
-    MatCardModule,
-    MatInputModule,
-    MatGridListModule,
-    MatListModule,
-    MatProgressSpinnerModule,
-    MatDialogModule,
-    MatSnackBarModule,
-    MatToolbarModule,
-    MatIconModule,
-    FormsModule,
+    //AuthRoutingModule,
+    //JournalRoutingModule,
+
+    //AuthModule,
+    //JournalModule,
+
     HttpClientModule
   ],
-  exports: [SnackbarComponent],
-  entryComponents: [SnackbarComponent],
+  exports: [],
   providers: [EventService],
   bootstrap: [AppComponent]
 })

@@ -24,7 +24,7 @@ export class ViewJournalComponent implements OnInit {
     });
   }
 
-  private _fetchJournalById() {
+  private _fetchJournalById(): void {
     this._apiService.getJournalById(this._journalId)
     .subscribe(journal => {
       this.journal = journal;

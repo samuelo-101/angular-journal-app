@@ -26,7 +26,7 @@ export class LandingComponent implements OnInit, AfterViewChecked {
   }
 
   goToSignIn() {
-    this._router.navigate(['/login']);
+    this._router.navigate(['/user/login']);
   }
 
 }

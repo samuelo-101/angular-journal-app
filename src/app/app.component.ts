@@ -23,7 +23,7 @@ export class AppComponent implements OnInit, OnDestroy {
 
   ngOnInit() {
     this._routeSubscription = this._router.events.subscribe(route => {
-      if (route instanceof NavigationEnd && route.url !== "/login" && route.url !== "/register") {
+      if (route instanceof NavigationEnd && route.url !== "/user/login" && route.url !== "/user/register") {
         if (!this._sessionService.isSessionActive()) {
           this._router.navigate(['/landing']);
         }
