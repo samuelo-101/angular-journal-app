@@ -2,7 +2,7 @@ import { Injectable } from '@angular/core';
 import { RegistrationRequest } from '../model/RegistrationRequest';
  
 import { Observable, of } from 'rxjs';
-import { catchError, map, tap } from 'rxjs/operators';
+import { catchError, tap } from 'rxjs/operators';
 
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { LoginRequest } from '../model/LoginRequest';
@@ -46,10 +46,7 @@ export class ApiService {
       catchError(this.handleError<LoginResponse>('login'))
     );
   }
-
-  getJournalListForUser() {
-
-  }
+  
   getJournalList(): Observable<Journal[]> {
     const urlPath = `${BASE_URL}journal/list`;
     return this.http.get<Journal[]>(urlPath, API_HEADER)
