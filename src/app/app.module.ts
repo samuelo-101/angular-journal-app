@@ -25,9 +25,6 @@ import { SnackbarComponent } from './snackbar/snackbar.component';
 
 import { ToolBarComponent } from './tool-bar/tool-bar.component';
 import { EventService } from './service/event.service';
-import { FormElementDirective } from './directive/form-element.directive';
-import { JournalPipe } from './pipe/journal.pipe';
-import { UserDisplayPipe } from './pipe/user-display.pipe';
 import { JournalRoutingModule } from './journal-routing.module';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 import { AuthRoutingModule } from './auth-routing.module';
@@ -41,8 +38,6 @@ import { SharedModule } from './shared.module';
     LandingComponent,
     DialogComponent,
     ToolBarComponent,
-    FormElementDirective,
-    UserDisplayPipe,
     PageNotFoundComponent
   ],
   imports: [     
@@ -52,11 +47,6 @@ import { SharedModule } from './shared.module';
     BrowserAnimationsModule,
 
     AppRoutingModule,
-    //AuthRoutingModule,
-    //JournalRoutingModule,
-
-    //AuthModule,
-    //JournalModule,
 
     HttpClientModule
   ],

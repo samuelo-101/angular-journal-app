@@ -4,6 +4,8 @@ import { ProgressIndicatorComponent } from './progress-indicator/progress-indica
 import { SnackbarComponent } from './snackbar/snackbar.component';
 import { MatFormFieldModule, MatButtonModule, MatCardModule, MatInputModule, MatGridListModule, MatListModule, MatProgressSpinnerModule, MatDialogModule, MatSnackBarModule, MatToolbarModule, MatIconModule } from '@angular/material';
 import { FormsModule } from '@angular/forms';
+import { UserDisplayPipe } from './pipe/user-display.pipe';
+import { FormElementDirective } from './directive/form-element.directive';
 
 @NgModule({
   imports: [
@@ -23,7 +25,7 @@ import { FormsModule } from '@angular/forms';
     FormsModule,
 
   ],
-  declarations: [ ProgressIndicatorComponent, SnackbarComponent ],
+  declarations: [ ProgressIndicatorComponent, SnackbarComponent, UserDisplayPipe, FormElementDirective ],
   exports: [ ProgressIndicatorComponent, SnackbarComponent,
     CommonModule,
     MatFormFieldModule,
@@ -36,7 +38,7 @@ import { FormsModule } from '@angular/forms';
     MatDialogModule,
     MatSnackBarModule,
     MatToolbarModule,
-    MatIconModule, FormsModule ],
+    MatIconModule, FormsModule, UserDisplayPipe, FormElementDirective ],
   entryComponents: [SnackbarComponent],
 })
 export class SharedModule { }

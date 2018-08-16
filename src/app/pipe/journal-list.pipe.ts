@@ -11,7 +11,7 @@ export class JournalListPipe implements PipeTransform {
 
   transform(journals: Journal[]): any {
     let result: any[] = [];
-    journals.map(journal => {
+    journals.slice(0).reverse().map(journal => {
       const createdOn = journal.createdOn;
       const ceratedOnDateInstance = new Date(createdOn[0], createdOn[1], createdOn[2], createdOn[3], createdOn[4]);
       const user = journal.user;
