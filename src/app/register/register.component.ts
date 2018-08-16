@@ -33,7 +33,7 @@ export class RegisterComponent implements OnInit {
         console.log(response);
         setTimeout(() => { 
           this._showLoadingIndicator(false);
-          this.router.navigate(['/login']);
+          this.router.navigate(['/user/login']);
         }, 2000);
       });
   }

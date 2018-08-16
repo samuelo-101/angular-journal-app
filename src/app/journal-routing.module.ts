@@ -6,9 +6,9 @@ import { ComposeJournalComponent } from './compose-journal/compose-journal.compo
 import { RouterModule } from '@angular/router';
 
 const routes = [
-  { path: 'journals', component: JournalsComponent },
-  { path: 'journal/:id', component: ViewJournalComponent },
-  { path: 'journal/compose', component: ComposeJournalComponent }
+  { path: '', component: JournalsComponent },
+  { path: 'view/:id', component: ViewJournalComponent },
+  { path: 'compose', component: ComposeJournalComponent }
 ];  
 
 @NgModule({

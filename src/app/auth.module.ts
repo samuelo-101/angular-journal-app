@@ -11,18 +11,17 @@ import { AuthComponent } from './auth.component';
 @NgModule({
   imports: [
     CommonModule,
-    
-    
+  
     AuthRoutingModule,
 
-
     MatCardModule,
-    FormsModule,
-
     MatFormFieldModule,
     MatListModule,
     MatProgressSpinnerModule,
     MatIconModule,
+
+    FormsModule,
+    
     SharedModule,
   ],
   declarations: [

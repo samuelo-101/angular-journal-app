@@ -31,11 +31,11 @@ export class JournalsComponent implements OnInit {
   }
 
   navComposeJournal() {
-    this._router.navigate(['/journal/compose']);
+    this._router.navigate(['/journals/compose']);
   }
 
   onJournalItemClick(id: number) {
-    this._router.navigate([`/journal/${id}`]);
+    this._router.navigate([`/journals/view/${id}`]);
   }
 
 }

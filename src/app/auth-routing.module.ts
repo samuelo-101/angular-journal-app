@@ -5,9 +5,13 @@ import { RouterModule } from '@angular/router';
 import { AuthComponent } from './auth.component';
 
 const routes = [
-  { path: '', component: AuthComponent },
-  { path: 'user/login', component: LoginComponent },
-  { path: 'user/register', component: RegisterComponent }
+  { path: 'login', component: LoginComponent },
+  { path: 'register', component: RegisterComponent },
+  // { path: 'journals', loadChildren: './journal.module#JournalModule' },
+  // { path: 'user', children: [
+  //   { path: 'login', component: LoginComponent },
+  //   { path: 'register', component: RegisterComponent }
+  // ] },
 ];
 
 @NgModule({
