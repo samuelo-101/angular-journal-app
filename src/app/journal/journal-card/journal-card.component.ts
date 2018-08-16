@@ -1,5 +1,5 @@
 import { Component, OnInit, Input } from '@angular/core';
-import { Journal } from '../model/Journal';
+import { Journal } from '../../model/Journal';
 
 @Component({
   selector: 'app-journal-card',

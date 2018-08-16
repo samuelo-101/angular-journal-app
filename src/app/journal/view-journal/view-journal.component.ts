@@ -1,7 +1,7 @@
 import { Component, OnInit, OnDestroy } from '@angular/core';
 import { Router, ActivatedRoute } from '@angular/router';
-import { Journal } from '../model/Journal';
-import { ApiService } from '../service/api.service';
+import { Journal } from '../../model/Journal';
+import { ApiService } from '../../service/api.service';
 
 @Component({
   selector: 'app-view-journal',

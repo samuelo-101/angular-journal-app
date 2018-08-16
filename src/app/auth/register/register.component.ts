@@ -2,9 +2,8 @@ import { Component, OnInit } from '@angular/core';
 
 import { Router } from  '@angular/router';
 
-import { RegistrationRequest } from '../model/RegistrationRequest';
-import { NgForm } from '@angular/forms';
-import { ApiService } from '../service/api.service';
+import { RegistrationRequest } from '../../model/RegistrationRequest';
+import { ApiService } from '../../service/api.service';
 
 @Component({
   selector: 'app-register',

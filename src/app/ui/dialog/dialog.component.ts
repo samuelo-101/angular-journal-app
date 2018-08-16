@@ -1,6 +1,6 @@
 import { Component, OnInit, Input, Output, EventEmitter, Inject } from '@angular/core';
 
-import { DialogDataModel } from '../model/DialogDataModel';
+import { DialogDataModel } from '../../model/DialogDataModel';
 
 @Component({
   templateUrl: './dialog.component.html',

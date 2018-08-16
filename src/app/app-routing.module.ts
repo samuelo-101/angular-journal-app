@@ -7,8 +7,8 @@ import { PageNotFoundComponent } from './page-not-found/page-not-found.component
 const routes = [
   { path: '', redirectTo: '/landing', pathMatch: 'full' },
   { path: 'landing', component:  LandingComponent},
-  { path: 'user', loadChildren: './auth.module#AuthModule' },
-  { path: 'journals', loadChildren: './journal.module#JournalModule' },
+  { path: 'user', loadChildren: './auth/auth.module#AuthModule' },
+  { path: 'journals', loadChildren: './journal/journal.module#JournalModule' },
   { path: '**', component: PageNotFoundComponent }
 ];
 

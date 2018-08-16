@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { JournalItem } from '../model/JournalItem';
-import { ApiService } from '../service/api.service';
-import { SnackbarService } from '../service/snackbar.service';
+import { JournalItem } from '../../model/JournalItem';
+import { ApiService } from '../../service/api.service';
+import { SnackbarService } from '../../service/snackbar.service';
 import { Router } from '@angular/router';
 
 @Component({

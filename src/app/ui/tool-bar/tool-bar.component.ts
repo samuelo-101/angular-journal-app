@@ -1,9 +1,9 @@
 import { Component, OnInit, Input } from '@angular/core';
-import { User } from '../model/User';
+import { User } from '../../model/User';
 import { Router } from '@angular/router';
-import { SessionService } from '../service/session.service';
-import { Dictionary } from '../constants/Dictionary';
-import { EventService } from '../service/event.service';
+import { SessionService } from '../../service/session.service';
+import { Dictionary } from '../../constants/Dictionary';
+import { EventService } from '../../service/event.service';
 
 @Component({
   selector: 'app-tool-bar',

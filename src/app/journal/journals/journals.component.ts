@@ -1,8 +1,8 @@
 import { Component, OnInit } from '@angular/core';
-import { Journal } from '../model/Journal';
-import { ApiService } from '../service/api.service';
+import { Journal } from '../../model/Journal';
+import { ApiService } from '../../service/api.service';
 import { Router } from '@angular/router';
-import { Dictionary } from '../constants/Dictionary';
+import { Dictionary } from '../../constants/Dictionary';
 
 @Component({
   selector: 'app-journals',

@@ -1,9 +1,8 @@
 import { NgModule } from '@angular/core';
-import { CommonModule } from '@angular/common';
+import { RouterModule } from '@angular/router';
 import { JournalsComponent } from './journals/journals.component';
 import { ViewJournalComponent } from './view-journal/view-journal.component';
 import { ComposeJournalComponent } from './compose-journal/compose-journal.component';
-import { RouterModule } from '@angular/router';
 
 const routes = [
   { path: '', component: JournalsComponent },
