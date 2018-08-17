@@ -1,5 +1,5 @@
-import { Component, OnInit, Input } from '@angular/core';
-import { Journal } from '../../model/Journal';
+import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
+import { SessionService } from '../../service/session.service';
 
 @Component({
   selector: 'app-journal-card',
@@ -8,11 +8,15 @@ import { Journal } from '../../model/Journal';
 })
 export class JournalCardComponent implements OnInit {
 
-  @Input() journal: Journal;
+  @Input() journal: any;
+  @Output() isComposedByMe: EventEmitter<Boolean> = new EventEmitter<Boolean>();
 
-  constructor() { }
+  constructor(private _sessionService: SessionService) { }
 
   ngOnInit() {
+    if(this.isComposedByMe && this.journal && this.journal.authorId) {
+      this.isComposedByMe.emit(this._sessionService.getPrincipal().id === this.journal.authorId)
+    }
   }
 
 }

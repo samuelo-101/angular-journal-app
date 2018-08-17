@@ -16,7 +16,8 @@ export class JournalPipe implements PipeTransform {
     return {
       id: journal.id, title: journal.title, content: journal.content,
       createdOn: this._pipe.transform(ceratedOnDateInstance, 'dd MMM yyyy hh:mm a'),
-      firstCharOfTitle: journal.title.charAt(0), author: user ? user.firstName + ' ' + user.lastName : ''
+      firstCharOfTitle: journal.title.charAt(0), 
+      author: user ? user.firstName + ' ' + user.lastName : '', authorId: user ? user.id : null
     };
   }
 

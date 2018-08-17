@@ -1,3 +1,5 @@
 <span class="container" *ngIf="journal">
-    <app-journal-card [journal]="journal | journal"></app-journal-card>
+    {{_composedByMeMessage}}
+    <br/>
+    <app-journal-card [journal]="journal | journal" (isComposedByMe)="onComposedByMeCheck($event)"></app-journal-card>
 </span> 
